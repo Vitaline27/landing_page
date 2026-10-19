@@ -27,6 +27,7 @@ nav a{
 .hero{
     font-size: 18px;
     color: rgb(146, 102, 71);
+    display: flex;
 }
 h1{
     font-size: 48px;
