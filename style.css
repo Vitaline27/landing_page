@@ -1,0 +1,35 @@
+body {
+    font-family: 'Roboto'; sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: #FFFAEF;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+nav ul{
+    list-style-type: none;
+    display:flex;
+    margin: 0px;
+    padding: 0px;
+    gap:8px;
+}
+nav a{
+    text-decoration: none;
+}
+.hero{
+    font-size: 18px;
+    color: rgb(146, 102, 71);
+}
+h1{
+    font-size: 48px;
+    color: rgb(160, 130, 118);
+    font-weight: 900;
+}
