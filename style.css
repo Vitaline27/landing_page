@@ -1,7 +1,12 @@
 body {
-    font-family: 'Roboto'; sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+    margin:0 auto;
+}
+.padding{
+    padding-left: 15%;
+    padding-right: 15%;
 }
 header{
     background-color: #FFFAEF;
@@ -10,6 +15,7 @@ header{
 }
 
 nav{
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
 
@@ -19,18 +25,43 @@ nav ul{
     display:flex;
     margin: 0px;
     padding: 0px;
-    gap:8px;
+    gap: 10px;
 }
 nav a{
     text-decoration: none;
+    color: darkcyan;
+    font-size: large;
+    font-weight: 600;
+
 }
 .hero{
     font-size: 18px;
     color: rgb(146, 102, 71);
     display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.herotext{
+    flex: 1 1 0;
+}
+/*I don't know how to set pictures width and heigh so I handled the problem with a flex-wrap and width set to 0 so that the flex-basis 0 work. Otherwise the picture is way too big.*/
+.hero img {
+    flex: 1 1 0;
+    width: 0;
 }
 h1{
     font-size: 48px;
     color: rgb(160, 130, 118);
     font-weight: 900;
 }
+
+    .hero button{
+        background-color: orange;
+        padding: 10px;
+        border-style: none;
+        border-radius: %;
+
+
+    }
