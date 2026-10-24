@@ -1,17 +1,28 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    font-style: normal;
+    font-weight: 100 900;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url(./fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+    font-style: italic;
+    font-weight: 100 900;
+}
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     margin:0;
 }
-.padding{
-    padding-left: 15%;
-    padding-right: 15%;
-}
+
 header{
     background-color: #FFFAEF;
     display: flex;
     flex-direction: column;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 nav{
@@ -84,7 +95,8 @@ h1{
 h2
 {
     text-align: center;
-    color: rgb(160, 130, 118)
+    color: rgb(160, 130, 118);
+    font-size: 36px;
 }
 
 .reasons{
@@ -110,6 +122,67 @@ figure{
     object-fit: cover;
 }
 #reasons{
+    padding-left: 15%;
+    padding-right: 15%;
     padding-bottom: 50px;
+    background-color: white;
 }
 
+#quote{
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #FFFAEF;
+
+}
+.quote{
+    font-size: 36px;
+    font-weight:100;
+    font-style: italic;
+    text-align: justify;
+}
+.author{
+    font-weight: 600;
+    text-align: right;
+    font-size: 20px;
+}
+.cta-section{
+    padding-left: 15%;
+    padding-right: 15%;
+    display:flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.cta-container{
+    background-color: orange;
+    padding: 30px;
+    display: flex;
+    border-radius: 20px;
+    gap:40px;
+}
+h3{
+    color: white;
+}
+.cta-text h3, .cta-text p{
+    margin: 0;
+    color: white;
+}
+.cta-container button{
+    background-color: #FFFAEF;
+    padding: 10px;
+    color: rgb(146, 102, 71);
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+}
+.cta-container button:hover{
+    background-color: rgb(146, 102, 71);
+    color:white;
+}
+footer{
+    text-align: center;
+    background-color: #FFFAEF;
+    color: rgb(146, 102, 71);
+}
