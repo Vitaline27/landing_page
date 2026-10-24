@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    margin:0 auto;
+    margin:0;
 }
 .padding{
     padding-left: 15%;
@@ -25,23 +25,35 @@ nav ul{
     display:flex;
     margin: 0px;
     padding: 0px;
-    gap: 10px;
+    gap: 40px;
+    align-items: center;
 }
 nav a{
     text-decoration: none;
-    color: darkcyan;
+    color: rgb(138, 13, 13);
     font-size: large;
     font-weight: 600;
 
 }
+nav a:hover{
+    color: crimson;
+}
+nav a:visited{
+    color: rgb(53, 46, 46);
+}
+nav a:active{
+    color: coral;
+}
+
 .hero{
     font-size: 18px;
     color: rgb(146, 102, 71);
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    align-items: center;
 }
 .herotext{
     flex: 1 1 0;
@@ -57,11 +69,47 @@ h1{
     font-weight: 900;
 }
 
-    .hero button{
-        background-color: orange;
-        padding: 10px;
-        border-style: none;
-        border-radius: %;
+.hero button{
+    background-color: orange;
+    padding: 20px;
+    font-size: large;
+    color: white;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 30px;
+}
+.hero button:hover{
+    background-color: rgb(146, 102, 71);
+}
+h2
+{
+    text-align: center;
+    color: rgb(160, 130, 118)
+}
 
+.reasons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+figure{
+    width: 100px;
+    text-align: center;
+    margin: 0;
+    flex: 0 1 100px;
 
-    }
+}
+.card{
+    border: 2px solid rgb(146, 102, 71);
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    /*Pour redimensionner les photos en respectant proportions*/
+    object-fit: cover;
+}
+#reasons{
+    padding-bottom: 50px;
+}
+
