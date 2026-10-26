@@ -1,3 +1,4 @@
+/*To use Roboto font*/
 @font-face {
     font-family: 'Roboto';
     src: url(./fonts/Roboto-VariableFont_wdth\,wght.ttf);
@@ -12,8 +13,6 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
     margin:0;
 }
 
@@ -24,11 +23,13 @@ header{
     padding-left: 15%;
     padding-right: 15%;
 }
-
+/*Navigation bar*/
 nav{
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 }
 nav ul{
@@ -38,6 +39,9 @@ nav ul{
     padding: 0px;
     gap: 40px;
     align-items: center;
+}
+nav img{
+    height: 40px;
 }
 nav a{
     text-decoration: none;
@@ -55,25 +59,31 @@ nav a:visited{
 nav a:active{
     color: coral;
 }
-
+/*Hero section*/
 .hero{
     font-size: 18px;
     color: rgb(146, 102, 71);
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
     padding-top: 50px;
     padding-bottom: 50px;
+    justify-content: space-between;
     align-items: center;
 }
 .herotext{
     flex: 1 1 0;
 }
-/*I don't know how to set pictures width and heigh so I handled the problem with a flex-wrap and width set to 0 so that the flex-basis 0 work. Otherwise the picture is way too big.*/
-.hero img {
+.img-hero{
     flex: 1 1 0;
-    width: 0;
 }
+.img-hero img{
+    height: 280px;
+    /*The picture is too big and I don't know how to give it the correct proportions. I found this way to make it fit the container. I can't find how to use the picture without a container here."*/
+    width: 100%;
+    object-fit: cover;
+}
+
 h1{
     font-size: 48px;
     color: rgb(160, 130, 118);
@@ -82,7 +92,7 @@ h1{
 
 .hero button{
     background-color: orange;
-    padding: 20px;
+    padding: 20px 30px;
     font-size: large;
     color: white;
     font-weight: 700;
@@ -92,78 +102,74 @@ h1{
 .hero button:hover{
     background-color: rgb(146, 102, 71);
 }
+/*Section 2 : "Some random info"*/
 h2
 {
     text-align: center;
     color: rgb(160, 130, 118);
     font-size: 36px;
+    font-weight: 900;
 }
-
-.reasons{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 40px;
-}
-figure{
-    width: 100px;
-    text-align: center;
-    margin: 0;
-    flex: 0 1 100px;
-
-}
-.card{
-    border: 2px solid rgb(146, 102, 71);
-    border-radius: 10px;
-    width: 80px;
-    height: 80px;
-    /*Pour redimensionner les photos en respectant proportions*/
-    object-fit: cover;
-}
-#reasons{
+/*Section 2 layout*/
+#reasons-layout{
     padding-left: 15%;
     padding-right: 15%;
     padding-bottom: 50px;
     background-color: white;
 }
-
-#quote{
-    padding-top: 10px;
-    padding-bottom: 50px;
-    padding-left: 15%;
-    padding-right: 15%;
+.reasons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+figure{
+    margin: 0;
+/* I used 104px because each card has a 2px border*/
+    flex: 0 1 104px;
+}
+figcaption{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.card{
+    border: 2px solid rgb(146, 102, 71);
+    border-radius: 10px;
+    /*I needed this to fill the container and preserve the pictures ratio*/
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+/*Section 3 : "Quote"*/
+#quote-layout{
+    padding: 50px 25%;
     background-color: #FFFAEF;
-
 }
 .quote{
     font-size: 36px;
-    font-weight:100;
+    font-weight:300;
     font-style: italic;
-    text-align: justify;
+    margin:0 0 20px 0;
 }
 .author{
     font-weight: 600;
     text-align: right;
     font-size: 20px;
+    margin: 0;
 }
-.cta-section{
-    padding-left: 15%;
-    padding-right: 15%;
-    display:flex;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+/*Section 4 : "CTA"*/
+#cta-layout{
+    padding: 50px 15%;
 }
 .cta-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: orange;
-    padding: 30px;
-    display: flex;
+    padding: 30px 150px;
     border-radius: 20px;
-    gap:40px;
-}
-h3{
-    color: white;
+    gap: 10px;
 }
 .cta-text h3, .cta-text p{
     margin: 0;
@@ -171,7 +177,7 @@ h3{
 }
 .cta-container button{
     background-color: #FFFAEF;
-    padding: 10px;
+    padding: 10px 20px;
     color: rgb(146, 102, 71);
     font-weight: 700;
     border-style: none;
@@ -181,8 +187,13 @@ h3{
     background-color: rgb(146, 102, 71);
     color:white;
 }
+/*Footer*/
 footer{
     text-align: center;
     background-color: #FFFAEF;
     color: rgb(146, 102, 71);
+    padding: 10px;
+}
+footer p{
+    margin: 0;
 }
